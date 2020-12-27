@@ -3,9 +3,12 @@ from setuptools import setup, find_packages
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
+exec(open("discord_bot_generator/__version__.py").read())
+
+
 setup(
     name="discord-bot-generator",
-    version="0.0.1",
+    version=__version__,
     author="SyedAhkam",
     author_email="smahkam57@gmail.com",
     description="Fastest and easiest way to create a new discord bot project ✨🚀",
