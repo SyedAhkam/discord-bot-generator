@@ -2,8 +2,6 @@
 
 > Fastest and easiest way to create a new discord bot project ✨🚀
 
-![discord_bot_generator_showcase](assets/discord_bot_generator.svg)
-
 ## Installation
 `$ pip install discord-bot-generator`
 
