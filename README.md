@@ -2,6 +2,13 @@
 
 > Fastest and easiest way to create a new discord bot project ✨🚀
 
+![PyPI - Downloads](https://img.shields.io/pypi/dm/discord-bot-generator)
+![PyPI](https://img.shields.io/pypi/v/discord-bot-generator)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/discord-bot-generator)
+![PyPI - Format](https://img.shields.io/pypi/format/discord-bot-generator)
+![GitHub last commit](https://img.shields.io/github/last-commit/SyedAhkam/discord-bot-generator)
+![PyPI - License](https://img.shields.io/pypi/l/discord-bot-generator)
+
 ## Installation
 `$ pip install discord-bot-generator`
 
