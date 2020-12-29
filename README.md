@@ -7,6 +7,24 @@
 
 *The project is still in its early stages, so bugs are expected.*
 
+## Usage
+```
+Usage: discord-bot-generator new [OPTIONS]
+
+  Creates a new project
+
+Options:
+  -n, --name TEXT        The project name
+  -d, --dest PATH        The destination folder path
+  -t, --template TEXT    The template to use
+  -bp, --botprefix TEXT  The default bot prefix
+  -ng, --nogit           If passed, git won't be initialized
+  -nc, --nocommit        If passed, no initial commit would be done
+  -np, --nopipenv        If passed, pipenv won't be used
+  -h, --help             Show this message and exit.
+
+```
+
 ## Features
 - Just one command to create a new project.
 - Community-made Templates (coming soon).
@@ -24,7 +42,7 @@
 - 0.0.1: First Release
 
 ## Meta
-- My discord tag: Syed#0006
+- My discord tag: Syed#5085
 - My email: smahkam57@gmail.com
 
 This project is distributed under the MIT license. See LICENSE for more information.
