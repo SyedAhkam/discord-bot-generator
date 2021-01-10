@@ -23,7 +23,7 @@ abs_path_to_snippets = os.path.join(
 
 
 def _copytree(
-    src: os.PathLike, dst: os.PathLike, symlinks: bool = False, ignore=None
+    src: os.PathLike, dst: os.PathLike, symlinks: bool = False, ignore: list=None
 ) -> None:
     """Copies all the files from one directory to another"""
     src_contents = os.listdir(src)
@@ -36,10 +36,13 @@ def _copytree(
         empty_char=" ",
     ) as items:
         for item in items:
+            if item in ignore:
+                continue
+
             s = os.path.join(src, item)
             d = os.path.join(dst, item)
             if os.path.isdir(s):
-                shutil.copytree(s, d, symlinks, ignore)
+                shutil.copytree(s, d, symlinks)
             else:
                 shutil.copy2(s, d)
             time.sleep(0.2)  # just to show the progress bar :p
@@ -49,7 +52,11 @@ def _copy_template_to_dest(
     template_name: str, dest: os.PathLike, project_name: str
 ) -> None:
     """Copies a template to dest folder"""
-    os.mkdir(f"{dest}/{project_name}")
+    project_path = os.path.join(dest, project_name)
+    template_path = os.path.join(abs_path_to_templates, template_name)
+    
+    os.mkdir(project_path)
+    
     click.secho(
         f"{CHECKMARK_EMOJI} Made Base Directory: {project_name}",
         fg=SUCCESS_COLOR,
@@ -57,7 +64,7 @@ def _copy_template_to_dest(
         nl=True,
     )
 
-    _copytree(f"{abs_path_to_templates}/{template_name}", f"{dest}/{project_name}")
+    _copytree(template_path, project_path, ignore=["__init__.py"])
     click.echo()
 
 
