@@ -15,7 +15,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/SyedAhkam/discord-bot-generator",
-    packages=find_packages(exclude=["tests"]),
+    packages=find_packages(include=["discord_bot_generator", "discord_bot_generator.*"], exclude=["tests"]),
     py_modules=["discord-bot-generator"],
     install_requires=["click", "colorama"],
     setup_requires=[],
