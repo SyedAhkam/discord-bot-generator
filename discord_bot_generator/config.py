@@ -1,0 +1,8 @@
+GITHUB_REPO_URL = "https://github.com/SyedAhkam/discord-bot-generator"
+SUCCESS_COLOR = "green"
+PROMPT_COLOR = "cyan"
+ERROR_COLOR = "red"
+ROCKET_EMOJI = "🚀"
+SPARKLES_EMOJI = "✨"
+DISAPPOINTING_EMOJI = "😞"
+CHECKMARK_EMOJI = "✅"
